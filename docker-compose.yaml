@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  webapp:
+    build:
+      context: ./docker
+      target: website
+      args:
+        WEBSITE: https://blog.12min.com  
+    ports:
+      - "8080:80"
